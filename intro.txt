@@ -1,0 +1,33 @@
+# Local Greengrocer Application - Instructions
+
+## Prerequisites
+- Java Development Kit (JDK) 11 or higher
+- MySQL Server running locally
+- JavaFX SDK (if not running via a modern IDE with built-in support)
+
+## Database Setup
+1. Open your MySQL client (Workbench, CLI, etc.).
+2. Run the script `src/main/resources/schema.sql`.
+   - This creates the `greengrocer_db` database.
+   - It inserts the default users:
+     - Customer: `cust` / `cust`
+     - Owner: `own` / `own`
+     - Carrier: `carr` / `carr`
+3. Ensure the database user is configured as:
+   - Username: `myuser`
+   - Password: `1234`
+   - If these differ, update `src/main/java/com/greengrocer/util/DatabaseAdapter.java`
+
+## Running the Application
+1. Compile the Java files. Ensure your JDBC driver (mysql-connector-java) and JavaFX libraries are on the classpath.
+2. Run `com.greengrocer.Main`.
+3. The Login screen will appear.
+
+## Usage
+- **Customer**: `cust`/`cust`. browse products, add to cart (check stock!), checkout.
+- **Owner**: `own`/`own`. Update prices (double-click cell), view orders, view reports.
+- **Carrier**: `carr`/`carr`. View "Available" orders, click "Take Order", then mark "Delivered".
+
+## Troubleshooting
+- **Connection Error**: Check MySQL is running and credentials match.
+- **No Images**: The initial database script inserts products with NULL images. To see images, you must manually update the BLOBs or implement an image uploader (ProductDAO supports it).

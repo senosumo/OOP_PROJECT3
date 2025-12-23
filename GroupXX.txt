@@ -1,0 +1,7 @@
+Group Number: XX
+
+| Student Name      | Score (0-5) | Contribution Description |
+|-------------------|-------------|--------------------------|
+| [Your Name]       | 5           | Implemented Backend & DB |
+| Teammate 1        | 5           | Implemented UI & CSS     |
+| Teammate 2        | 5           | Testing & Documentation  |
