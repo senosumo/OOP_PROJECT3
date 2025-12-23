@@ -1,0 +1,39 @@
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: transparent;
+}
+
+/* Apply background ONLY to AnchorPane */
+.anchor-pane {
+    -fx-background-image: url("/images/freshhhh.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* Labels */
+.label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, black, 6, 0.6, 0, 0);
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: rgba(46, 204, 113, 0.9);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+}
+
+.button:hover {
+    -fx-background-color: rgba(39, 174, 96, 0.95);
+}
+
+/* Input fields */
+.text-field,
+.password-field {
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-padding: 6;
+}

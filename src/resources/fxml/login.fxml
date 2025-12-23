@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefWidth="960" prefHeight="540"
+            xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.LoginController"
+            style="-fx-background-image: url('/images/freshhhh.jpg');
+                   -fx-background-size: cover;
+                   -fx-background-position: center center;
+                   -fx-background-repeat: no-repeat;">
+
+
+    <children>
+
+       <Label text="GreenGrocer Login"
+               layoutX="400"
+               layoutY="120"
+               style="-fx-font-size: 24px; -fx-text-fill: white;" />
+
+
+
+
+        <TextField fx:id="usernameField"
+                   layoutX="360"
+                   layoutY="210"
+                   prefWidth="240"
+                   promptText="Username" />
+
+        <PasswordField fx:id="passwordField"
+                       layoutX="360"
+                       layoutY="260"
+                       prefWidth="240"
+                       promptText="Password" />
+
+        <Button text="Login"
+                layoutX="360"
+                layoutY="320"
+                prefWidth="110"
+                onAction="#handleLogin" />
+
+        <Button text="Register"
+                layoutX="490"
+                layoutY="320"
+                prefWidth="110"
+                onAction="#handleRegister" />
+
+        <Label fx:id="errorLabel"
+               layoutX="360"
+               layoutY="370"
+               prefWidth="240"
+               style="-fx-text-fill: yellow; -fx-font-weight: bold;" />
+
+    </children>
+</AnchorPane>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefWidth="960" prefHeight="540"
+            xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1">
+
+    <Label text="Customer Screen - Group11 GreenGrocer"
+           layoutX="250"
+           layoutY="250"
+           style="-fx-font-size: 24px;" />
+
+</AnchorPane>
