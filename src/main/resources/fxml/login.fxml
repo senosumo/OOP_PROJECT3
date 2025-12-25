@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.image.ImageView?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.greengrocer.controller.LoginController"
+           stylesheets="@../styles.css">
+    
+    <VBox alignment="CENTER" spacing="20" maxWidth="400" maxHeight="350" styleClass="glass-pane">
+        <padding>
+            <Insets top="30" right="40" bottom="30" left="40"/>
+        </padding>
+
+        <Label text="Local Greengrocer" styleClass="title-label"/>
+        
+        <VBox spacing="5" alignment="CENTER_LEFT">
+            <Label text="Username"/>
+            <TextField fx:id="usernameField" promptText="Enter username"/>
+        </VBox>
+        
+        <VBox spacing="5" alignment="CENTER_LEFT">
+            <Label text="Password"/>
+            <PasswordField fx:id="passwordField" promptText="Enter password"/>
+        </VBox>
+        
+        <Button fx:id="loginButton" text="Login" maxWidth="Infinity" onAction="#handleLogin"/>
+        
+        <Button text="Don't have an account? Register" styleClass="secondary-button" onAction="#goToRegister"/>
+    </VBox>
+</StackPane>

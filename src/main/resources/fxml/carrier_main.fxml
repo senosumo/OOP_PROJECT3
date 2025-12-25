@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.greengrocer.controller.CarrierController"
+            stylesheets="@../styles.css" prefWidth="960" prefHeight="540">
+
+    <top>
+        <HBox spacing="20" alignment="CENTER_LEFT" style="-fx-padding: 10; -fx-background-color: rgba(0,0,0,0.5);">
+            <Label fx:id="welcomeLabel" text="Carrier Dashboard" styleClass="header-label"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Refresh" onAction="#refreshData"/>
+            <Button text="Logout" style="-fx-background-color: #e74c3c;" onAction="#handleLogout"/>
+        </HBox>
+    </top>
+
+    <center>
+        <SplitPane dividerPositions="0.5">
+            <VBox spacing="10" style="-fx-padding: 20;">
+                <Label text="Available Orders" styleClass="title-label" style="-fx-font-size: 18px;"/>
+                <TableView fx:id="availableTable" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="avIdCol" text="ID" prefWidth="50"/>
+                        <TableColumn fx:id="avAddressCol" text="Address" prefWidth="200"/>
+                        <TableColumn fx:id="avDateCol" text="Delivery Date" prefWidth="150"/>
+                    </columns>
+                </TableView>
+                <Button text="Take Selected Order" maxWidth="Infinity" onAction="#handleTakeOrder"/>
+            </VBox>
+            
+            <VBox spacing="10" style="-fx-padding: 20;">
+                <Label text="My Current Orders" styleClass="title-label" style="-fx-font-size: 18px;"/>
+                <TableView fx:id="myTable" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="myIdCol" text="ID" prefWidth="50"/>
+                        <TableColumn fx:id="myStatusCol" text="Status" prefWidth="100"/>
+                        <TableColumn fx:id="myDateCol" text="Delivery Date" prefWidth="150"/>
+                    </columns>
+                </TableView>
+                <Button text="Mark Delivered" maxWidth="Infinity" style="-fx-background-color: #27ae60;" onAction="#handleCompleteOrder"/>
+            </VBox>
+        </SplitPane>
+    </center>
+    
+</BorderPane>
